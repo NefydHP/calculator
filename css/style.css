@@ -1,0 +1,157 @@
+@font-face {
+	font-family: "Digital7";
+	src: url(../assets/digital-7.ttf);
+}
+
+::selection {
+	background-color: #222;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100dvw;
+	height: 100dvh;
+
+	background-color: #111;
+	margin: 0;
+}
+
+#calculator-body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+	width: 420px;
+	min-width: 210px;
+	aspect-ratio: 21 / 32;
+
+	margin: 25px 25px 50px 25px;
+
+	border-radius: 25px;
+
+	border-top-style: solid;
+	border-top-color: #444;
+	border-top-width: 3px;
+
+	border-bottom-style: inset;
+	border-bottom-color: #444;
+	border-bottom-width: 3px;
+
+	background-color: #333;
+}
+
+#calculator-body::before {
+	content: "";
+	position: absolute;
+	bottom: -3%;
+	z-index: -1;
+
+	width: 100%;
+	height: 100%;
+
+	border-radius: inherit;
+	box-shadow: 0 0 10px 0 #000;
+
+	background-color: #2c2c2c;
+}
+
+#calculator-body #screen-display {
+	position: absolute;
+	top: 5%;
+
+	display: flex;
+	justify-content: end;
+	align-items: center;
+
+	width: 85%;
+	height: 20%;
+
+	overflow: hidden auto;
+	scrollbar-width: none;
+
+	border-radius: inherit;
+
+	border-top-style: inset;
+	border-top-width: 3px;
+	border-top-color: #333;
+
+	border-bottom-style: inset;
+	border-bottom-width: 3px;
+	border-bottom-color: #3c3c3c;
+
+	background-color: #2c2c2c;
+}
+
+#calculator-body #screen-display::-webkit-scrollbar {
+	display: none;
+}
+
+#calculator-body #screen-display #number-display {
+	--number-display-max-font-size: 64;
+	--number-display-min-font-size: 32;
+
+	padding-right: 18px;
+
+	font-family: "Digital7";
+	color: #aaa;
+
+	overflow-wrap: break-word;
+	white-space: normal;
+	max-width: 90%;
+
+	line-height: 32px;
+}
+
+#calculator-body #pad {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 10px;
+
+	width: 100%;
+	height: 65%;
+
+	align-self: flex-end;
+
+	padding: 30px;
+}
+
+#calculator-body #pad button {
+	all: unset;
+	user-select: none;
+
+	background-color: #2c2c2c;
+
+	border-radius: 15px;
+
+	border-top-style: solid;
+	border-top-width: 3px;
+	border-top-color: #3c3c3c;
+
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: #222;
+
+	color: #aaa;
+	font-family: "Digital7";
+	font-size: 2rem;
+	text-align: center;
+}
+
+#calculator-body #pad button:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+
+	background-color: #222;
+
+	border-top-color: #2c2c2c;
+	border-bottom-color: #1c1c1c;
+}
+
+#calculator-body #pad button:active {
+	transform: scale(1);
+	background-color: #333;
+}
