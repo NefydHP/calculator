@@ -27,10 +27,18 @@ document.querySelectorAll("#calculator-body #pad button").forEach((btn) => {
 					break;
 
 				case "X":
+					if (
+						numberDisplay.innerHTML.charAt(
+							numberDisplay.innerHTML.length - 1
+						) == "."
+					) {
+						thereIsPeriod = false;
+					}
 					numberDisplay.innerHTML = numberDisplay.innerHTML.slice(
 						0,
 						-1
 					);
+
 					break;
 			}
 		});

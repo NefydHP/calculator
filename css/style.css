@@ -36,7 +36,7 @@ body {
 	border-top-color: #444;
 	border-top-width: 3px;
 
-	border-bottom-style: inset;
+	border-bottom-style: solid;
 	border-bottom-color: #444;
 	border-bottom-width: 3px;
 
@@ -74,11 +74,11 @@ body {
 
 	border-radius: inherit;
 
-	border-top-style: inset;
+	border-top-style: solid;
 	border-top-width: 3px;
-	border-top-color: #333;
+	border-top-color: #222;
 
-	border-bottom-style: inset;
+	border-bottom-style: solid;
 	border-bottom-width: 3px;
 	border-bottom-color: #3c3c3c;
 
